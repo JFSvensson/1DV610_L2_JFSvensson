@@ -1,0 +1,19 @@
+{
+  "name": "1dv610_l2_jfsvensson",
+  "version": "1.0.0",
+  "description": "A library for laboration 2 in the course 1DV610.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JFSvensson/1DV610_L2_JFSvensson.git"
+  },
+  "author": "Fredrik Svensson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JFSvensson/1DV610_L2_JFSvensson/issues"
+  },
+  "homepage": "https://github.com/JFSvensson/1DV610_L2_JFSvensson#readme"
+}
