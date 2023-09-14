@@ -55,6 +55,8 @@ The orbital elements for the supported celestial bodies are stored in json. The 
 - w: Argument of periapsis (perihelion for heliocentric orbits). Often denoted with ω (lowercase omega)
 - M: Mean anomaly, fictitious "angle" that increase linear with time. The True anomaly changes faster at perihelion. 
 
+The data stored in the json-file is in case of angles in degrees. The semi-major axis is in astronomical units, AU, except for the moon which is in earth radii.
+
 ### Time scale
 Time is calculated in days since (or before) january 1 in the year 2000. The following formula is used for validity over the entire Gregorian Calendar:
 
