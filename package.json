@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A module for finding the position of celestial objects.",
   "type": "module",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "test"
   },
