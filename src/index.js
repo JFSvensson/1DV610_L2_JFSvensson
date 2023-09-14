@@ -1,8 +1,6 @@
 import sunOrbitalElements from './OrbitalElements/sun.json' assert { type: 'json' }
 
-console.log(sunOrbitalElements)
-
-whereIsTheSun('2023-09-13', 12)
+whereIsTheSun('2023-09-13', 15)
 
 function whereIsTheSun(date, hours) {
   let time = timeSince2000(date, hours)
@@ -37,7 +35,6 @@ function whereIsTheSun(date, hours) {
   
   // Compute true longitude, and make sure it is between 0 and 360
   let trueLongitudeRadians = trueAnomaly + (periapsis * Math.PI/180)
-  console.log('True longitude: ' + trueLongitudeRadians)
   while (trueLongitudeRadians < 0 || trueLongitudeRadians > (Math.PI * 2)) {
     if (trueLongitude < 0) {
       trueLongitude = trueLongitude + Math.PI * 2
@@ -56,11 +53,27 @@ function whereIsTheSun(date, hours) {
   let zEquatorial = distance * Math.sin(trueLongitudeRadians) * Math.sin(obliquityOfTheEclipticRadians)
   
   // Compute position in Right Ascension and Declination
-  let rightAscension = (Math.atan2(yEquatorial, xEquatorial) * 180/Math.PI) / 15
-  let declination = Math.atan2(zEquatorial, Math.sqrt(xEquatorial * xEquatorial + yEquatorial * yEquatorial)) * 180/Math.PI
+  let rightAscensionRadians = Math.atan2(yEquatorial, xEquatorial)
+  let rightAscension = { hours: 0, minutes: 0, seconds: 0}
+  rightAscension.hours = (rightAscensionRadians * 180/Math.PI) / 15
+  rightAscension.minutes = (rightAscension.hours - Math.floor(rightAscension.hours)) * 60
+  rightAscension.seconds = (rightAscension.minutes - Math.floor(rightAscension.minutes)) * 60
 
-  console.log('The Sun is at RA: ' + rightAscension + ' hours, and Decl: ' + declination + ' degrees on ' + date + ' at ' + hours + '.')
-  console.log('and at ' + xEquatorial + ', ' + yEquatorial + ', ' + zEquatorial + ' in equatorial coordinates.')
+  let declinationRadians = Math.atan2(zEquatorial, Math.sqrt(xEquatorial * xEquatorial + yEquatorial * yEquatorial))
+  let declination = { degrees: 0, minutes: 0, seconds: 0}
+  declination.degrees = declinationRadians * 180/Math.PI
+  declination.arcminutes = (declination.degrees - Math.floor(declination.degrees)) * 60
+  declination.arcseconds = (declination.arcminutes - Math.floor(declination.arcminutes)) * 60
+
+  console.log('The Sun is at RA: ' 
+    + Math.floor(rightAscension.hours) + ' hours, ' 
+    + Math.floor(rightAscension.minutes) + ' minutes, and '
+    + Math.floor(rightAscension.seconds) + ' seconds. And Decl: ' 
+    + Math.floor(declination.degrees) + ' degrees, '
+    + Math.floor(declination.arcminutes) + ' arcminutes and '
+    + Math.floor(declination.arcseconds) + ' arcseconds on ' 
+    + date + ' at ' + hours + '.')
+  // console.log('and at ' + xEquatorial + ', ' + yEquatorial + ', ' + zEquatorial + ' in equatorial coordinates.')
 
   // return { rightAscension, declination }
 }
