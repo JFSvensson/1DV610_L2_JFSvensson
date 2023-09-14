@@ -1,7 +1,7 @@
 # CelestialFinder
 A module that calculates the position of a celestial bodies in the solar system at a given time. 
 
-The current version supports:
+The current version (0.1) supports:
 - The Sun
 
 ## Installation
@@ -64,6 +64,10 @@ Time is calculated in days since (or before) january 1 in the year 2000. The fol
  d = 367*y - 7 * ( y + (m+9)/12 ) / 4 - 3 * ( ( y + (m-9)/7 ) / 100 + 1 ) / 4 + 275*m/9 + D - 730515
  ```
 All division is integer, thus rounded down.
+
+## Versions
+### 0.1
+First release, supports calculating the position of the Sun.
 
 ## License
 This project is part of laboration 2 in the course "1DV610 - Introduktion till mjukvarukvalitet" at Linnéuniversitetet. It's published under MIT License.
