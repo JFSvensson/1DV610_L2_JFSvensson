@@ -1,0 +1,23 @@
+{
+  "a": 0.387098,
+  "e": {
+    "constant": 0.205635,
+    "coefficient": 5.59E-10
+  },
+  "i": {
+    "constant": 7.0047,
+    "coefficient": 5.00E-8
+  },
+  "N": {
+    "constant": 48.3313,
+    "coefficient": 3.24587E-5
+  },
+  "w": {
+    "constant": 29.1241,
+    "coefficient": 1.01444E-5
+  },
+  "M": {
+    "constant": 168.6562,
+    "coefficient": 4.0923344368
+  }
+}
