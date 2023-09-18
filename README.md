@@ -1,8 +1,9 @@
-# CelestialFinder
+# CelestialFinder 0.2
 A module that calculates the position of a celestial bodies in the solar system at a given time. 
 
-The current version (0.1) supports:
+The current version (0.2) supports:
 - The Sun
+- The Moon
 
 ## Installation
 
@@ -18,12 +19,17 @@ import CelestialFinder from 'CelestialFinder'
 ## Usage
 
 ### Find the position
-CelestialFinder.whereIsTheSun('2023-09-06 10:00:00')
+The date is input as a string. The time in hours, and fractions of hours. The time eloped since midnight between 31 december 1999 and 1 januari 2000, epoch 2000, is also possible to recieve by using CelestialFinder.timeSince2000('2023-09-13', 15).
+
+#### The Sun
+CelestialFinder.whereIsTheSun('2023-09-06', 10)
+
+#### The Moon
+CelestialFinder.whereIsTheMoon('2023-09-06', 10)
 
 ## Future 
 
 Hopefully future releases will support:
-- The Moon
 - Mercury
 - Venus
 - Mars
@@ -68,6 +74,9 @@ All division is integer, thus rounded down.
 ## Versions
 ### 0.1
 First release, supports calculating the position of the Sun.
+
+### 0.2
+CelestialFinder now supports finding the position of the Moon. It is also possible to get the time eloped since epoch 2000, that is the midnight between 31 december 1999 and 1 januari 2000.
 
 ## License
 This project is part of laboration 2 in the course "1DV610 - Introduktion till mjukvarukvalitet" at Linnéuniversitetet. It's published under MIT License.
