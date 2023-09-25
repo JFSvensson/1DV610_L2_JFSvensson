@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JFSvensson/1DV610_L2_JFSvensson/issues"
   },
-  "homepage": "https://github.com/JFSvensson/1DV610_L2_JFSvensson#readme"
+  "homepage": "https://github.com/JFSvensson/1DV610_L2_JFSvensson#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
