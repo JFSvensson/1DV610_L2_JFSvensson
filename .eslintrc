@@ -1,0 +1,28 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true,
+        "jest": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:node/recommended",
+        "plugin:jest/recommended"
+    ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "requireConfigFile": false
+    },
+    "plugins": [
+        "node",
+        "jest",
+        "@babel/plugin-syntax-import-attributes"
+    ],
+    "rules": {
+        "node/no-deprecated-assert": "error",
+        "node/no-unsupported-features/es-syntax": ["error", { "version": ">=14.0.0", "ignores": ["modules"] }]
+    }
+}
