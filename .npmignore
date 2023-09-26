@@ -1,0 +1,18 @@
+# Ignorera testfiler och mappar
+__tests__/
+test/
+tests/
+*.test.js
+
+# Ignorera exempelfiler
+examples/
+
+# Ignorera konfigurationsfiler
+config.json
+.babelrc
+.eslintrc
+.vscode/
+
+# Ignorera studierelaterat material
+reflektion.md
+testrapport.md
