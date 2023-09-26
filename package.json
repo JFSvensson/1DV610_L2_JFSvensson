@@ -1,6 +1,6 @@
 {
   "name": "celestialfinder",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A module for finding the position of celestial objects.",
   "type": "module",
   "main": "lib/index.js",

@@ -1,3 +1,5 @@
+EXPERIMENTAL - USE AT OWN RISK
+
 # CelestialFinder 0.2
 A module that calculates the position of a celestial bodies in the solar system at a given time. 
 
@@ -76,7 +78,12 @@ All division is integer, thus rounded down.
 First release, supports calculating the position of the Sun.
 
 ### 0.2
-CelestialFinder now supports finding the position of the Moon. It is also possible to get the time eloped since epoch 2000, that is the midnight between 31 december 1999 and 1 january 2000.
+CelestialFinder now supports finding the position of the Moon. It is also possible to get the time eloped since epoch 2000, that is the midnight between 31 december 1999 and 1 january 2000. Released as a npm package.
+
+### 0.2.1
+Code rewrites making it possible to call and get results from calculations such as distance, periapsis, anomalies and more for a given time. These features are undocumented.
+
+### 0.3
 
 ## License
 This project is part of "laboration 2" in the course "1DV610 - Introduktion till mjukvarukvalitet" at Linnéuniversitetet. It's published under MIT License.
