@@ -138,7 +138,7 @@ Updated README.md with clearer instructions for installation and usage.
 ### 0.2.3-0.2.4
 Code cleaning and fixing som errors in README.md.
 
-### 0.2.5
+### 0.2.5-0.2.6
 Renaming of methods for finding the position of the Sun and Moon. Adding the ability to get the distance between Earth and Sun, and also the periapsis.
 
 
