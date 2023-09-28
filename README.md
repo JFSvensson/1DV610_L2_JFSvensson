@@ -3,7 +3,7 @@ EXPERIMENTAL - USE AT OWN RISK
 # CelestialFinder
 A JavaScript library that calculates the position of a celestial bodies in the solar system at a given time. 
 
-## Version 0.2
+## Current Version (0.2.x)
 The current version supports:
 - The Sun
 - The Moon
@@ -57,13 +57,25 @@ Now you can use the `celestialFinder` to calculate the position of a celestial o
 For the position of the Sun, as seen from Earth:
 
 ```js
-celestialFinder.theSun()
+celestialFinder.positionOfTheSun()
+```
+
+The distance in astronomical units, AU, between the Sun and Earth at the given time:
+
+```js
+celestialFinder.distanceToTheSun()
+```
+
+The periapsis at the given time:
+
+```js
+celestialFinder.periapsisOfTheSun()
 ```
 
 #### The Moon
 For the position of the Moon, as seen from Earth:
 ```js
-celestialFinder.theMoon()
+celestialFinder.positionOfTheMoon()
 ```
 
 #### Time since 2000
@@ -71,6 +83,9 @@ For the calculations of the position there is a need to also calculate the time 
 ```js
 celestialFinder.timeSince2000()
 ```
+
+## Known Issues
+The position of the celestial objects do come with errors. Do not use this library for sending real rockets into space and hope to make a soft landing. Odds are that you will end like the passengers in Aniara, science fiction poem written by Swedish Nobel laureate Harry Martinson.
 
 ## Future Features
 Hopefully future releases will support:
@@ -120,8 +135,15 @@ Code rewrites making it possible to call and get results from calculations such 
 ### 0.2.2
 Updated README.md with clearer instructions for installation and usage. 
 
-### 0.2.3
+### 0.2.3-0.2.4
 Code cleaning and fixing som errors in README.md.
+
+### 0.2.5
+Renaming of methods for finding the position of the Sun and Moon. Adding the ability to get the distance between Earth and Sun, and also the periapsis.
+
 
 ## License
 This project is part of "laboration 2" in the course "1DV610 - Introduktion till mjukvarukvalitet" at Linnéuniversitetet. It's published under MIT License.
+
+## Contributing
+The library is available at GitHub (https://github.com/JFSvensson/1DV610_L2_JFSvensson). Pull requests and/or suggestions for future releases are welcome. 
