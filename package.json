@@ -1,12 +1,12 @@
 {
   "name": "celestialfinder",
-  "version": "0.2.1",
-  "description": "A module for finding the position of celestial objects.",
+  "version": "0.2.2",
+  "description": "A library for finding the position of celestial objects.",
   "type": "module",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "start": "node ./lib/index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
