@@ -4,6 +4,9 @@ Fredrik Svensson (fs222id) - 1DV610
 ## Automatiska enhetstester
 Ramverk: Jest.
 
+Testerna körs efter att på lämpligt sätt plockat ner koden från GitHub genom `npm test`. Dock krävs viss modifikation av ./lib/ImportOrbitalElements.js, där importerna behöver kommenteras bort, och i filen nedanstående importer kommenteras av. Anledningen är Jests oförmåga att hantera "assert { type: 'json' }" som node.js kräver att import av json-filer förses med.
+
+
 ### Import av banelement
 De banelement som används i beräkningarna importeras från json-filer. Det är viktigt att dessa värden är korrekta, vilket testats genom att jämföra importen av några slumpvis utvalda element med de förväntade värdena (de som finns angivna i filen och som hämtats från https://stjarnhimlen.se/comp/ppcomp.html).
 
