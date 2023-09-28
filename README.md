@@ -1,36 +1,73 @@
 EXPERIMENTAL - USE AT OWN RISK
 
-# CelestialFinder 0.2
-A module that calculates the position of a celestial bodies in the solar system at a given time. 
+# CelestialFinder 0.2.2
+A JavaScript library that calculates the position of a celestial bodies in the solar system at a given time. 
 
-The current version (0.2) supports:
+## Version 0.2.2
+The current version supports:
 - The Sun
 - The Moon
 
-## Installation
-
-``` js
-npm install --- 
-```
-
-
-## Loading 
-
-import CelestialFinder from 'CelestialFinder'
-
 ## Usage
 
+### Installation
+CelestialFinder is distributed as a npm package.
+
+``` bash
+npm i celestialfinder 
+```
+
+### Importing 
+Import the CelestialFinder class in your JavaScript file.
+
+```js
+import CelestialFinder from 'CelestialFinder'
+```
+
+The create an instance of the CelestialFinder class by providing a date and time in hours. The date format is "yy-mm-dd" and hours are given with fractions (eg. 1 hour 45 minutes as 1.75).
+
+```js
+const celestialFinder = new CelestialFinder(date, hours)
+```
+
 ### Find the position
-The date is input as a string. The time in hours, and fractions of hours. The time eloped since midnight between 31 december 1999 and 1 january 2000, epoch 2000, is also possible to receive by using CelestialFinder.timeSince2000('2023-09-13', 15).
+Now you can use the `celestialFinder` to calculate the position of a celestial object at the given date and time. The object returned is of the form (numbers included as an example):
+
+```js
+{
+  rightAscension: {
+    hours: -3.875798062906315,
+    minutes: 7.452116225621106,
+    seconds: 27.12697353726636
+  },
+  declination: {
+    degrees: -15.074768465809955,
+    arcminutes: 55.51389205140271,
+    arcseconds: 30.833523084162806
+  }
+}
+```
 
 #### The Sun
-CelestialFinder.whereIsTheSun('2023-09-06', 10)
+For the position of the Sun, as seen from Earth:
+
+```js
+celestialFinder.theSun()
+```
 
 #### The Moon
-CelestialFinder.whereIsTheMoon('2023-09-06', 10)
+For the position of the Moon, as seen from Earth:
+```js
+celestialFinder.theMoon()
+```
 
-## Future 
+#### Time since 2000
+For the calculations of the position there is a need to also calculate the time eloped since midnight between 31 december 1999 and 1 january 2000, epoch 2000, in days. It is possible to get this by using CelestialFinder.
+```js
+celestialFinder.timeSince2000()
+```
 
+## Future Features
 Hopefully future releases will support:
 - Mercury
 - Venus
@@ -41,15 +78,7 @@ Hopefully future releases will support:
 - Neptune
 - Pluto and other bodies like Ceres
 
-It will also include the ability to give time for next perihelium or aphelium.
-
-nextPerihelion
-lastPerihelion
-
-nextAphelion
-lastAphelion
-
-timeToNextPerihelion
+Other planned features include the ability to give time for next perihelium or aphelium.
 
 ## Calculations 
 The calculations are based on Paul Schlyters work published at https://stjarnhimlen.se/comp/ppcomp.html.
@@ -83,7 +112,8 @@ CelestialFinder now supports finding the position of the Moon. It is also possib
 ### 0.2.1
 Code rewrites making it possible to call and get results from calculations such as distance, periapsis, anomalies and more for a given time. These features are undocumented.
 
-### 0.3
+### 0.2.2
+Updated README.md with clearer instructions for installation and usage. 
 
 ## License
 This project is part of "laboration 2" in the course "1DV610 - Introduktion till mjukvarukvalitet" at Linnéuniversitetet. It's published under MIT License.
