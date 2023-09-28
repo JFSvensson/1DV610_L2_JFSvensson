@@ -1,9 +1,9 @@
 EXPERIMENTAL - USE AT OWN RISK
 
-# CelestialFinder 0.2.2
+# CelestialFinder
 A JavaScript library that calculates the position of a celestial bodies in the solar system at a given time. 
 
-## Version 0.2.2
+## Version 0.2
 The current version supports:
 - The Sun
 - The Moon
@@ -21,13 +21,18 @@ npm i celestialfinder
 Import the CelestialFinder class in your JavaScript file.
 
 ```js
-import CelestialFinder from 'CelestialFinder'
+import CelestialFinder from 'celestialfinder'
 ```
 
-The create an instance of the CelestialFinder class by providing a date and time in hours. The date format is "yy-mm-dd" and hours are given with fractions (eg. 1 hour 45 minutes as 1.75).
+The create an instance of the CelestialFinder class by providing a date and time in hours. The date input is a string in the format 'yy-mm-dd', and hours are given as integers or with fractions (eg. 1 hour 45 minutes as 1.75).
 
 ```js
 const celestialFinder = new CelestialFinder(date, hours)
+```
+
+**Example:**
+```js
+const celestialFinder = new CelestialFinder('2010-10-12', 16)
 ```
 
 ### Find the position
@@ -114,6 +119,9 @@ Code rewrites making it possible to call and get results from calculations such 
 
 ### 0.2.2
 Updated README.md with clearer instructions for installation and usage. 
+
+### 0.2.3
+Code cleaning and fixing som errors in README.md.
 
 ## License
 This project is part of "laboration 2" in the course "1DV610 - Introduktion till mjukvarukvalitet" at Linnéuniversitetet. It's published under MIT License.
