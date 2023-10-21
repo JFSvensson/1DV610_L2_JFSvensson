@@ -152,6 +152,9 @@ Code cleaning and fixing som errors in README.md.
 ### 0.2.5-0.2.6
 Renaming of methods for finding the position of the Sun and Moon. Adding the ability to get the distance between Earth and Sun, and also the periapsis.
 
+### 0.2.7
+Add fix for negative value for Right Ascension.
+
 
 ## License
 This project is part of "laboration 2" in the course "1DV610 - Introduktion till mjukvarukvalitet" at Linnéuniversitetet. It's published under MIT License.
