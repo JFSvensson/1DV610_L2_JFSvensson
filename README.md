@@ -87,6 +87,17 @@ celestialFinder.timeSince2000()
 ## Known Issues
 The position of the celestial objects do come with errors. Do not use this library for sending real rockets into space and hope to make a soft landing. Odds are that you will end like the passengers in Aniara, science fiction poem written by Swedish Nobel laureate Harry Martinson.
 
+### TypeError/Declaration file
+There seems to be an issue where Visual Studio Code thinks the library is in Typescript. It will then give an error like:
+
+Could not find a declaration file for module './lib/CelestialFinder.js'.[..] implicitly has an 'any' type.ts(7016)
+
+And in the browser inspector or development tools it gets an error like:
+
+Uncaught TypeError: Failed to resolve module specifier "CelestialFinder". Relative references must start with either "/", "./", or "../".
+
+**Solution:** When importing the library, use the whole relative path. Example: The class wanting to use the library is in /src/controller, the path could be '../../node_modules/celestialfinder/index.js'
+
 ## Future Features
 Hopefully future releases will support:
 - Mercury
