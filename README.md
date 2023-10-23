@@ -134,27 +134,7 @@ Time is calculated in days since (or before) january 1 in the year 2000. The fol
 All division is integer, thus rounded down.
 
 ## Versions
-### 0.1
-First release, supports calculating the position of the Sun.
-
-### 0.2
-CelestialFinder now supports finding the position of the Moon. It is also possible to get the time eloped since epoch 2000, that is the midnight between 31 december 1999 and 1 january 2000. Released as a npm package.
-
-### 0.2.1
-Code rewrites making it possible to call and get results from calculations such as distance, periapsis, anomalies and more for a given time. These features are undocumented.
-
-### 0.2.2
-Updated README.md with clearer instructions for installation and usage. 
-
-### 0.2.3-0.2.4
-Code cleaning and fixing som errors in README.md.
-
-### 0.2.5-0.2.6
-Renaming of methods for finding the position of the Sun and Moon. Adding the ability to get the distance between Earth and Sun, and also the periapsis.
-
-### 0.2.7
-Add fix for negative value for Right Ascension.
-
+See [CHANGELOG.md](./CHANGELOG.md).
 
 ## License
 This project is part of "laboration 2" in the course "1DV610 - Introduktion till mjukvarukvalitet" at Linnéuniversitetet. It's published under MIT License.
